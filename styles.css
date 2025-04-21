@@ -1,10 +1,43 @@
 @charset "UTF-8";
 
+/* do some coding for the body and class book */
 body {
     font-family:Arial, Helvetica, sans-serif;
-    padding: 0px;
+    padding: 0;
     background-color: #dbd9d9;
     text-align: center;
-    margin: auto;
+    margin: 0;
+  }
+
+  .book {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+/* add font-size or some styling for the h1 and h2 */
+  h1 {
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  h2{
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  /* do styling for the search buttton and box to look more readable */
+  input, button {
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: auto;
   }
   
+  #results {
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+  }
