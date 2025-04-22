@@ -17,6 +17,15 @@ function fetchResults(e) {
 
   // create a URL for the API
   let url = `${bookUrl}${encodeURIComponent(searchKey)}`;
-}
+
   console.log('Fetching from:', url);
 
+   //  to get the books use fetch()
+   fetch(url)
+   .then(response => response.json())
+   .then(json => displayResults(json))
+   .catch(err => {
+     console.error('Fetch error:', err);
+     section.innerHTML = '<p>Error. Please try again after some time.</p>';
+   });
+}
