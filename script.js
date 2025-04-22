@@ -29,3 +29,16 @@ function fetchResults(e) {
      section.innerHTML = '<p>Error. Please try again after some time.</p>';
    });
 }
+
+// use function to display results
+function displayResults(json) {
+    const books = json.items;
+  
+    if (!books || books.length === 0) {
+      const noResults = document.createElement('p');
+      noResults.textContent = 'No Result found.';
+      section.appendChild(noResults);
+      return;
+    }
+
+}
