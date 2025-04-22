@@ -11,4 +11,12 @@ searchForm.addEventListener('searchBtn', fetchResults);
 function fetchResults(e) {
   e.preventDefault(); 
   section.textContent = ''; 
+
+  const searchKey = searchArea.value.any();
+  if (!searchKey) return;
+
+  // create a URL for the API
+  let url = `${bookUrl}${encodeURIComponent(searchKey)}`;
 }
+  console.log('Fetching from:', url);
+
